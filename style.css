@@ -1,0 +1,50 @@
+body {
+  background-color: #333;
+  color: #eee;
+  font-family: 'メイリオ';
+  list-style: square inside;
+}
+
+h1 {
+  color: #36c;
+  margin-top: 50px;
+  font-size: 230%;
+}
+h2 {
+  color: #c36;
+  font-size: 180%;
+}
+h3 {
+  color: #3c6;
+  font-size: 130%;
+  border: 0px;
+}
+
+table {
+  background-color: #666;
+}
+tr, td {
+  border: 1px solid #999;
+  background-color: #006;
+  padding: 10px;
+}
+th {
+  border: 1px solid #999;
+  background-color: #039;
+  padding: 10px;
+}
+
+code {
+  font-family: 'メイリオ';
+}
+pre {
+  background-color: #999;
+}
+
+.bg {
+  background: url(bg_darts.png);
+}
+
+img {
+  border: 1px solid #eee;
+}
