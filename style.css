@@ -1,23 +1,50 @@
+/* ページ番号を追加する場合
+下記修正を直接することで生成されるhtml上でページ番号が出力できる
+/home/sawafuji.yuya/.anyenv/envs/ndenv/versions/v5.0.0/lib/node_modules/cleaver
+
+ - resourses/script.js
+ - function updateTabIndex 最後に追加
+var pageElem = document.getElementById('page');
+pageElem.innerHTML = position;
+
+ - templates/default.mustache
+ - controlsの後
+ <div class="pagenumber">
+   <div id="page"></div>
+ </div>
+
+ - resourses/default.css
+ .pagenumber {
+   position: absolute;
+   bottom: 20px;
+   right: 20px;
+ }
+ */
+
 body {
-  background-color: #333;
+  background-color: #111;
+  background: url("images/background.jpg") no-repeat 0px 4px #111;
   color: #eee;
-  font-family: 'メイリオ';
+  font-family: 'Ricty for Powerline BoldForPowerline', 'Ricty Diminished', 'メイリオ',sans-serif;
   list-style: square inside;
 }
 
 h1 {
   color: #36c;
-  margin-top: 50px;
-  font-size: 230%;
+  margin-top: 0px;
+  font-size: 130%;
+  text-align: left;
 }
 h2 {
   color: #c36;
-  font-size: 180%;
+  font-size: 120%;
+  text-align: left;
 }
 h3 {
   color: #3c6;
-  font-size: 130%;
+  font-size: 110%;
   border: 0px;
+  text-align: left;
 }
 
 table {
@@ -34,17 +61,50 @@ th {
   padding: 10px;
 }
 
+ul {
+  margin: 5px;
+  padding: 0 0 0 20px;
+  line-height: 1.1;
+}
+
 code {
-  font-family: 'メイリオ';
+  font-family: 'Ricty for Powerline BoldForPowerline', 'Ricty Diminished', 'メイリオ',sans-serif;
 }
 pre {
   background-color: #999;
 }
+/* p {
+  text-align: center;
+} */
+strong {
+  color: #fff;
+  font-size: 250%;
+}
 
-.bg {
-  background: url(bg_darts.png);
+.slide.sky {
+  background-color: #000;
+  background: url("images/bg_sky2.jpg") no-repeat 0px 4px #333;
+}
+
+.function {
+  background-color: #333;
 }
 
 img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   border: 1px solid #eee;
+  background: #fff;
 }
+
+.slide-content {
+  width: 1000px;
+  height: 800px;
+}
+
+.progress-bar {
+  height: 3px;
+  background-color: #c36;
+}
+
